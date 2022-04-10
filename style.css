@@ -411,5 +411,9 @@ main {
     .content-container .text {
         max-width: 33.75rem;
     }
+    
+    .logo {
+        margin-top: 5.1375rem;
+    }
 }
 
