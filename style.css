@@ -146,6 +146,7 @@ main {
     color: var(--white);
     border: none;
     padding: 16px 40px;
+    cursor: pointer;
 }
 
 .btn-container {
@@ -217,10 +218,19 @@ main {
     margin-bottom: 2rem;
 }
 
-.footer {
-    padding-top: 92px;
-    margin-top: -5.75rem;
+.footer-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
     background-color: var(--blue-clr);
+    opacity: 80%;
+}
+
+.footer {
+    background-image: url("./assets/mobile/image-footer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -5.75rem;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -228,36 +238,21 @@ main {
     width: 100%;
 }
 
+.footer-container {
+    padding: 70px 24px 24px 24px;
+    max-width: 573px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 .footer .btn {
     margin-bottom: 4.5rem;
     position: relative;
     z-index: 2;
-}
-
-.mobile-bg-img {
-    opacity: 0.1;
-    width: 100%;
-    position:absolute;
-    bottom:0;
-    left:0;
-}
-
-.tablet-bg-img {
-    opacity: 0.1;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: none;
-}
-
-.desktop-bg-img {
-    opacity: 0.1;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: none;
+    cursor: pointer;
 }
 
 .before-hero,
@@ -271,16 +266,6 @@ main {
 
 .after-hero {
     margin-right: -2rem;
-}
-
-@media (min-width: 375px) {
-    .mobile-bg-img {
-        display: none;
-    }
-
-    .tablet-bg-img {
-        display: block;
-    }
 }
 
 @media (min-width: 768px) {
@@ -307,7 +292,7 @@ main {
     }
 
     .footer-text {
-        margin-bottom: 2.5rem;
+        margin-bottom: 1rem;
     }
 
     .footer .btn {
@@ -327,12 +312,8 @@ main {
         width: 164px;
     }
 
-    .tablet-bg-img {
-        display: none;
-    }
-
-    .desktop-bg-img {
-        display: block;
+    .footer {
+        background-image: url("./assets/tablet/image-footer.jpg");
     }
 }
 
@@ -343,7 +324,17 @@ main {
         justify-content: center;
         padding: 111px;
         text-align: left;
+        background-image: url("./assets/desktop/image-footer.jpg");
     }
+
+    .footer-container {
+        max-width: 80%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        text-align: left;
+    }
+
     .footer * {
         margin: 0;
         padding: 0;
@@ -416,4 +407,3 @@ main {
         margin-top: 5.1375rem;
     }
 }
-
